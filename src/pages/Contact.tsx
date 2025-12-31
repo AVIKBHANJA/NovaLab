@@ -24,8 +24,8 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
   try {
     const response = await fetch("http://localhost:3000/api/form/submit", {
