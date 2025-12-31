@@ -27,17 +27,47 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  try {
+    const response = await fetch("http://localhost:3000/api/form/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        business: formData.business,
+        message: formData.message,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Something went wrong");
+    }
 
     toast({
       title: "Message sent!",
       description: "We'll get back to you within 24 hours.",
     });
 
-    setFormData({ name: "", email: "", business: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      business: "",
+      message: "",
+    });
+  } catch (error: any) {
+    toast({
+      title: "Submission failed",
+      description: error.message || "Server error",
+      variant: "destructive",
+    });
+  } finally {
     setIsSubmitting(false);
-  };
+  }
+};
 
   return (
     <Layout>
