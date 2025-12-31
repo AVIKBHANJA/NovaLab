@@ -16,7 +16,9 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -27,47 +29,50 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-  try {
-    const response = await fetch("https://nova-labs-server.vercel.app/api/form/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        business: formData.business,
-        message: formData.message,
-      }),
-    });
+    try {
+      const response = await fetch(
+        "https://nova-labs-server.vercel.app/api/form/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            business: formData.business,
+            message: formData.message,
+          }),
+        }
+      );
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (!response.ok) {
-      throw new Error(data.message || "Something went wrong");
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        business: "",
+        message: "",
+      });
+    } catch (error: any) {
+      toast({
+        title: "Submission failed",
+        description: error.message || "Server error",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-
-    setFormData({
-      name: "",
-      email: "",
-      business: "",
-      message: "",
-    });
-  } catch (error: any) {
-    toast({
-      title: "Submission failed",
-      description: error.message || "Server error",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  };
 
   return (
     <Layout>
@@ -80,7 +85,8 @@ const Contact = () => {
               Let's <span className="text-gradient">Talk</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed animate-fade-up animation-delay-100">
-              Have a project in mind? We'd love to hear about it. Fill out the form below or book a free consultation call.
+              Have a project in mind? We'd love to hear about it. Fill out the
+              form below or book a free consultation call.
             </p>
           </div>
         </div>
@@ -185,7 +191,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Email</p>
-                      <p className="font-medium">hello@novalabs.studio</p>
+                      <a
+                        href="mailto:avikbhanja3@gmail.com"
+                        className="font-medium hover:text-primary transition-colors"
+                      >
+                        avikbhanja3@gmail.com
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -202,7 +213,9 @@ const Contact = () => {
                       <Clock className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">Response Time</p>
+                      <p className="text-sm text-muted-foreground">
+                        Response Time
+                      </p>
                       <p className="font-medium">Within 24 hours</p>
                     </div>
                   </div>
@@ -215,10 +228,22 @@ const Contact = () => {
                   <h3 className="font-semibold">Book a Free Call</h3>
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Prefer to talk it through? Schedule a free 30-minute consultation with our team.
+                  Prefer to talk it through? Schedule a free 30-minute
+                  consultation with our team.
                 </p>
-                <Button variant="outline" size="sm" className="w-full border-primary/50 hover:bg-primary/10">
-                  Schedule a Call
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full border-primary/50 hover:bg-primary/10"
+                  asChild
+                >
+                  <a
+                    href="https://calendly.com/avikbhanja3/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Schedule a Call
+                  </a>
                 </Button>
               </div>
 
@@ -230,8 +255,8 @@ const Contact = () => {
                     We'll review your inquiry within 24 hours
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-0.5">→</span>
-                    A team member will reach out to discuss details
+                    <span className="text-primary mt-0.5">→</span>A team member
+                    will reach out to discuss details
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-0.5">→</span>
