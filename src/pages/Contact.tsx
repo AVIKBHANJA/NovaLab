@@ -28,7 +28,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
   try {
-    const response = await fetch("http://localhost:3000/api/form/submit", {
+    const response = await fetch("https://nova-labs-server.vercel.app/api/form/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
