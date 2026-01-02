@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 256) rotate(90) scale(256)">
+      <stop stop-color="#0D1628" />
+      <stop offset="1" stop-color="#05080F" />
+    </radialGradient>
+    <linearGradient id="frame" x1="128" y1="112" x2="384" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#59D6FF" />
+      <stop offset="1" stop-color="#5875FF" />
+    </linearGradient>
+    <linearGradient id="core" x1="236" y1="222" x2="284" y2="290" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5CFFFF" />
+      <stop offset="1" stop-color="#1EA7FF" />
+    </linearGradient>
+    <filter id="glow" x="96" y="96" width="320" height="320" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.25 0 0 0 0 0.7 0 0 0 0 1 0 0 0 0.5 0" />
+    </filter>
+    <mask id="cuts" x="0" y="0" width="512" height="512" maskUnits="userSpaceOnUse">
+      <rect width="512" height="512" fill="white" />
+      <path fill="black" d="M256 202L292 238H220Z" />
+      <path fill="black" d="M310 256L346 292V220Z" />
+      <path fill="black" d="M256 310L292 274H220Z" />
+      <path fill="black" d="M202 256L166 220V292Z" />
+    </mask>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+  <g filter="url(#glow)">
+    <path d="M256 88L408 240L256 392L104 240L256 88Z" stroke="url(#frame)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none" mask="url(#cuts)" />
+  </g>
+  <path d="M256 88L408 240L256 392L104 240L256 88Z" stroke="url(#frame)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none" mask="url(#cuts)" />
+  <g filter="url(#glow)">
+    <path d="M256 216L296 256L256 296L216 256L256 216Z" fill="url(#core)" />
+  </g>
+  <path d="M256 216L296 256L256 296L216 256L256 216Z" fill="url(#core)" stroke="url(#frame)" stroke-width="6" />
+</svg>
