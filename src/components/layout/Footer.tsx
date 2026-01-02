@@ -21,19 +21,19 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://x.com/avik_bhanja"
                 className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
               >
                 <Twitter className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/avikbhanja/"
                 className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/avik_b_001/"
                 className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
               >
                 <Instagram className="w-4 h-4" />
@@ -86,7 +86,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Mail className="w-4 h-4 text-primary" />
-                hello@novalabs.studio
+                avikbhanja3@gmail.com
               </li>
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <MapPin className="w-4 h-4 text-primary" />
