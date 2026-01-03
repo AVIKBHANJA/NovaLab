@@ -4,54 +4,68 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const caseStudies = [
-  {
-    title: "TechStart Platform Redesign",
-    category: "Website Development",
-    problem: "TechStart's outdated website was struggling to convert visitors into paying customers.",
-    solution: "Complete redesign with modern UI, improved user flow, and conversion-optimized landing pages.",
-    result: "40% increase in conversions, 60% lower bounce rate",
-    color: "from-cyan-500/20 to-blue-500/20",
+   {
+    title: "Dipanjali Research Portfolio",
+    category: "Portfolio Website",
+    problem:
+      "Dipanjali needed a professional platform to showcase her biotech research, publications, and creative photography work to collaborators and employers.",
+    solution:
+      "Custom portfolio website featuring research highlights, publication records, interactive galleries, and seamless integration of academic and creative projects.",
+    result:
+      "Professional showcase combining 10+ research projects, 2+ publications, 3 internships, and photography gallery",
+    color: "from-violet-500/20 to-purple-500/20",
   },
   {
     title: "GrowthCo AI Chatbot",
     category: "AI & Automation",
-    problem: "GrowthCo's support team was overwhelmed with repetitive customer queries.",
-    solution: "Custom AI chatbot integrated with their knowledge base and CRM system.",
+    problem:
+      "GrowthCo's support team was overwhelmed with repetitive customer queries.",
+    solution:
+      "Custom AI chatbot integrated with their knowledge base and CRM system.",
     result: "70% reduction in support tickets, 24/7 customer engagement",
     color: "from-purple-500/20 to-pink-500/20",
   },
   {
     title: "CoachEmily Personal Brand",
     category: "Website Design",
-    problem: "Emily needed a professional platform to establish credibility and attract coaching clients.",
-    solution: "Stunning personal brand website with booking integration and content hub.",
+    problem:
+      "Emily needed a professional platform to establish credibility and attract coaching clients.",
+    solution:
+      "Stunning personal brand website with booking integration and content hub.",
     result: "3x increase in consultation bookings",
     color: "from-orange-500/20 to-red-500/20",
   },
   {
     title: "ScaleUp Content Generator",
     category: "AI Tools",
-    problem: "ScaleUp's marketing team spent hours creating social media content manually.",
-    solution: "Custom AI-powered content generator tailored to their brand voice and style.",
+    problem:
+      "ScaleUp's marketing team spent hours creating social media content manually.",
+    solution:
+      "Custom AI-powered content generator tailored to their brand voice and style.",
     result: "80% time saved on content creation",
     color: "from-green-500/20 to-emerald-500/20",
   },
   {
     title: "LocalBites Delivery Platform",
     category: "Website Development",
-    problem: "LocalBites needed an online ordering system to compete with larger delivery apps.",
-    solution: "Custom ordering platform with real-time tracking and restaurant dashboard.",
+    problem:
+      "LocalBites needed an online ordering system to compete with larger delivery apps.",
+    solution:
+      "Custom ordering platform with real-time tracking and restaurant dashboard.",
     result: "150% increase in online orders",
     color: "from-yellow-500/20 to-orange-500/20",
   },
   {
     title: "FitPro Automation Suite",
     category: "Automation",
-    problem: "FitPro gym was manually managing member communications and scheduling.",
-    solution: "Automated email sequences, booking system, and member engagement workflows.",
+    problem:
+      "FitPro gym was manually managing member communications and scheduling.",
+    solution:
+      "Automated email sequences, booking system, and member engagement workflows.",
     result: "25 hours saved weekly on admin tasks",
     color: "from-blue-500/20 to-indigo-500/20",
-  },
+  }
+ 
 ];
 
 const Work = () => {
@@ -66,7 +80,8 @@ const Work = () => {
               Our <span className="text-gradient">Work</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed animate-fade-up animation-delay-100">
-              A showcase of projects that drove real results for our clients. From websites to AI tools, see what we've built.
+              A showcase of projects that drove real results for our clients.
+              From websites to AI tools, see what we've built.
             </p>
           </div>
         </div>
@@ -81,31 +96,45 @@ const Work = () => {
                 key={study.title}
                 className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow flex flex-col"
               >
-                <div className={`aspect-video rounded-xl bg-gradient-to-br ${study.color} mb-6 flex items-center justify-center`}>
+                <div
+                  className={`aspect-video rounded-xl bg-gradient-to-br ${study.color} mb-6 flex items-center justify-center`}
+                >
                   <div className="w-16 h-16 rounded-2xl bg-background/80 backdrop-blur flex items-center justify-center">
                     <ArrowUpRight className="w-6 h-6 text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </div>
-                
-                <span className="text-xs font-medium text-primary mb-2">{study.category}</span>
+
+                <span className="text-xs font-medium text-primary mb-2">
+                  {study.category}
+                </span>
                 <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
                   {study.title}
                 </h3>
-                
+
                 <div className="space-y-3 flex-1">
                   <div>
-                    <p className="text-xs text-muted-foreground mb-1">Problem</p>
-                    <p className="text-sm text-foreground/80">{study.problem}</p>
+                    <p className="text-xs text-muted-foreground mb-1">
+                      Problem
+                    </p>
+                    <p className="text-sm text-foreground/80">
+                      {study.problem}
+                    </p>
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground mb-1">Solution</p>
-                    <p className="text-sm text-foreground/80">{study.solution}</p>
+                    <p className="text-xs text-muted-foreground mb-1">
+                      Solution
+                    </p>
+                    <p className="text-sm text-foreground/80">
+                      {study.solution}
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="mt-6 pt-4 border-t border-border">
                   <p className="text-xs text-muted-foreground mb-1">Result</p>
-                  <p className="text-sm font-semibold text-primary">{study.result}</p>
+                  <p className="text-sm font-semibold text-primary">
+                    {study.result}
+                  </p>
                 </div>
               </div>
             ))}
@@ -121,7 +150,8 @@ const Work = () => {
               Want Similar Results?
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Let's discuss how we can help transform your business with a tailored digital solution.
+              Let's discuss how we can help transform your business with a
+              tailored digital solution.
             </p>
             <Link to="/contact">
               <Button variant="hero" size="xl">
