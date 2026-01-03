@@ -1,10 +1,14 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import Layout from "@/components/layout/Layout";
 import { Mail, MapPin, Clock, Send, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+
+// Initialize EmailJS
+emailjs.init("jwtr0tVSltzXln76t");
 
 const Contact = () => {
   const { toast } = useToast();
@@ -30,7 +34,25 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        business: formData.business || "Not provided",
+        message: formData.message,
+        to_email: "avikbhanja3@gmail.com",
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        "service_vm9juqp",
+        "template_srgnyqc",
+        templateParams,
+        "jwtr0tVSltzXln76t"
+      );
+
+      // Also store the data in your database
+      const dbResponse = await fetch(
         "https://nova-labs-server.vercel.app/api/form/submit",
         {
           method: "POST",
@@ -46,10 +68,8 @@ const Contact = () => {
         }
       );
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Something went wrong");
+      if (!dbResponse.ok) {
+        throw new Error("Failed to store form data");
       }
 
       toast({
@@ -66,7 +86,8 @@ const Contact = () => {
     } catch (error: any) {
       toast({
         title: "Submission failed",
-        description: error.message || "Server error",
+        description:
+          error.message || "Failed to send message. Please try again.",
         variant: "destructive",
       });
     } finally {
