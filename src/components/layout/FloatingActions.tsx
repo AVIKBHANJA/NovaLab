@@ -25,14 +25,14 @@ const FloatingActions = () => {
             <span className="text-sm font-medium">Book a Call</span>
           </Link>
           <a
-            href="mailto:hello@novalabs.com"
+            href="mailto:avikbhanja3@gmail.com"
             className="flex items-center gap-2 bg-background border border-border/50 px-4 py-2.5 rounded-full shadow-lg hover:bg-accent transition-colors"
           >
             <Mail className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium">Email Us</span>
           </a>
           <a
-            href="tel:+1234567890"
+            href="tel:+918910782478"
             className="flex items-center gap-2 bg-background border border-border/50 px-4 py-2.5 rounded-full shadow-lg hover:bg-accent transition-colors"
           >
             <Phone className="w-4 h-4 text-primary" />
