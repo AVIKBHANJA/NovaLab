@@ -10,12 +10,12 @@ const team = [
     bio: "Full-stack designer with 2+ years in startups. Full-stack engineer specializing in Next.js and modern web architecture.",
     icon: "👨‍💼",
   },
-  {
-    name: "Jeet Kangsabanik",
-    role: "Co-Founder & Lead Developer",
-    bio: "Full Stack Web Developer with experience in React Native and mobile app development.",
-    icon: "👨‍💻",
-  },
+  // {
+  //   name: "Jeet Kangsabanik",
+  //   role: "Co-Founder & Lead Developer",
+  //   bio: "Full Stack Web Developer with experience in React Native and mobile app development.",
+  //   icon: "👨‍💻",
+  // },
 ];
 
 const values = [
