@@ -1,6 +1,35 @@
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
+
+// Hook to detect mobile devices
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(
+        window.innerWidth < 768 ||
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      );
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+};
+
+// CSS-only fallback for mobile
+const MobileFallback = () => (
+  <div className="absolute inset-0 -z-10 overflow-hidden">
+    <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
+    <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-blue-500/15 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
+    <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-cyan-500/10 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: '2s' }} />
+  </div>
+);
 
 const Particles = ({ count = 500 }: { count?: number }) => {
   const mesh = useRef<THREE.Points>(null);
@@ -114,14 +143,22 @@ const FloatingOrbs = () => {
 };
 
 const ParticleField = () => {
+  const isMobile = useIsMobile();
+
+  // Show CSS fallback on mobile for better performance
+  if (isMobile) {
+    return <MobileFallback />;
+  }
+
   return (
     <div className="absolute inset-0 -z-10">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 60 }}
-        dpr={[1, 2]}
+        dpr={[1, 1.5]} // Reduced DPR for better performance
         style={{ background: 'transparent' }}
+        gl={{ antialias: false, powerPreference: 'high-performance' }}
       >
-        <Particles count={400} />
+        <Particles count={300} /> {/* Reduced particle count */}
         <FloatingOrbs />
         <ambientLight intensity={0.5} />
       </Canvas>

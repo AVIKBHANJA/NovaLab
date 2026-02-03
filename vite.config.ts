@@ -17,4 +17,34 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Enable minification
+    minify: "esbuild",
+    // Generate source maps for debugging
+    sourcemap: false,
+    // Optimize chunk size
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        // Manual chunks for better caching
+        manualChunks: {
+          // Three.js bundle (heavy, cache separately)
+          "three-vendor": ["three", "@react-three/fiber", "@react-three/drei"],
+          // React core
+          "react-vendor": ["react", "react-dom"],
+          // Router
+          "router": ["react-router-dom"],
+          // UI components (Radix)
+          "ui-vendor": [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-tooltip",
+            "@radix-ui/react-toast",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-accordion",
+          ],
+        },
+      },
+    },
+  },
 }));
