@@ -4,23 +4,23 @@ import { Globe, Bot, Workflow, Share2, ArrowRight } from "lucide-react";
 const services = [
   {
     icon: Globe,
-    title: "Website Design & Development",
-    description: "Beautiful, high-converting websites that make your brand stand out and drive real results.",
+    title: "Custom Website Development",
+    description: "Professional freelance web development for high-converting websites. Custom designs built with React & Next.js that drive real business results.",
   },
   {
     icon: Bot,
     title: "AI Tools & Generators",
-    description: "Custom AI-powered tools that automate repetitive tasks and enhance your workflow.",
+    description: "Custom AI-powered tools and generators that automate repetitive tasks, reduce costs, and give your business a competitive edge.",
   },
   {
     icon: Workflow,
-    title: "Automation & Chatbots",
-    description: "Smart chatbots and automation systems that work 24/7 to engage your customers.",
+    title: "Chatbot & Automation",
+    description: "Smart chatbot development and business automation that works 24/7 to engage customers and capture leads.",
   },
   {
     icon: Share2,
-    title: "Digital Presence Support",
-    description: "Complete social media and digital strategy to grow your online visibility.",
+    title: "Digital Marketing & SEO",
+    description: "Complete digital strategy, social media management, and SEO optimization to grow your online visibility and organic traffic.",
   },
 ];
 
@@ -35,10 +35,10 @@ const ServicesOverview = () => {
             SERVICES
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            What We <span className="text-gradient">Build</span>
+            Freelance Web Development <span className="text-gradient">Services</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            End-to-end digital solutions tailored for modern businesses
+            End-to-end digital solutions from a professional freelance developer
           </p>
         </div>
 

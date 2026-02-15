@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -71,17 +72,23 @@ const caseStudies = [
 const Work = () => {
   return (
     <Layout>
+      <SEO
+        title="Portfolio & Case Studies - Freelance Web Development Projects"
+        description="See real results from our freelance web development projects. 50+ websites, AI tools, and automation systems built for startups and small businesses. View our portfolio and case studies."
+        keywords="freelance web developer portfolio, web development case studies, website design examples, freelance developer projects, React portfolio, AI tool examples"
+        canonical="https://freelance.avikbhanja.tech/work"
+      />
+
       {/* Hero */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(186_100%_50%/0.1),transparent_50%)]" />
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6 animate-fade-up">
-              Our <span className="text-gradient">Work</span>
+              Our <span className="text-gradient">Portfolio</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed animate-fade-up animation-delay-100">
-              A showcase of projects that drove real results for our clients.
-              From websites to AI tools, see what we've built.
+              Real results from real freelance web development projects. From custom websites to AI tools, see how we've helped 50+ businesses grow their digital presence.
             </p>
           </div>
         </div>

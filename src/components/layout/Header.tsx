@@ -76,15 +76,15 @@ const Header = () => {
               <span className="text-sm text-muted-foreground font-mono">Quick Actions</span>
               <div className="flex items-center gap-2">
                 <ThemeToggle />
-                <a 
-                  href="mailto:hello@novalabs.com" 
+                <a
+                  href="mailto:avikbhanja3@gmail.com"
                   className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors"
                   aria-label="Email us"
                 >
                   <Mail className="w-5 h-5" />
                 </a>
-                <a 
-                  href="tel:+1234567890" 
+                <a
+                  href="tel:+918910782478"
                   className="p-2 rounded-lg bg-accent/10 border border-accent/20 text-accent hover:bg-accent/20 transition-colors"
                   aria-label="Call us"
                 >

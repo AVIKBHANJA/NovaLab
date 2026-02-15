@@ -36,11 +36,11 @@ const WhyChooseUs = () => {
               WHY US
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Why Work <span className="text-gradient">With Us</span>
+              Why Hire <span className="text-gradient">NovaLabs</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              We're not just another agency. As a student-led studio, we bring fresh perspectives, 
-              genuine passion, and competitive pricing—without sacrificing professionalism.
+              We're not just another freelance developer. We bring agency-quality work with freelancer flexibility - fresh perspectives,
+              genuine passion, and competitive pricing without sacrificing professionalism.
             </p>
             <div className="space-y-4">
               {features.map((feature, index) => (

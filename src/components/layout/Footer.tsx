@@ -17,7 +17,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              A student-led digital solutions studio helping startups and small businesses build their online presence.
+              Professional freelance web development studio helping startups and small businesses build high-converting websites, AI tools, and automation systems.
             </p>
             <div className="flex gap-4">
               <a

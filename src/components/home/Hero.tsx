@@ -26,26 +26,26 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-gradient glass-effect mb-8 animate-fade-up">
             <Sparkles className="w-4 h-4 text-primary animate-glow-pulse" />
-            <span className="text-sm text-muted-foreground font-mono">Student-led Digital Studio</span>
+            <span className="text-sm text-muted-foreground font-mono">Freelance Web Development Studio</span>
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-8 animate-fade-up animation-delay-100">
-            We Build Digital
+            Freelance Web
             <br />
-            <span className="text-gradient">Experiences That</span>
+            <span className="text-gradient">Developer Who</span>
             <br />
             <span className="relative inline-block">
-              <span className="text-gradient">Convert</span>
+              <span className="text-gradient">Delivers</span>
               <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent rounded-full opacity-50" />
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-up animation-delay-200">
-            Helping startups, small businesses, and creators establish a 
-            <span className="text-foreground font-medium"> powerful online presence </span>
-            with modern websites, AI tools, and automation.
+            Professional freelance web developer helping startups and small businesses build
+            <span className="text-foreground font-medium"> high-converting websites</span>,
+            AI tools, and automation systems that drive real growth.
           </p>
 
           {/* CTAs */}
@@ -66,10 +66,10 @@ const Hero = () => {
           {/* Tech Stack Pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 mb-16 animate-fade-up animation-delay-400">
             {[
-              { icon: Code2, label: "Next.js" },
-              { icon: Zap, label: "AI Powered" },
-              { icon: Code2, label: "React" },
-              { icon: Zap, label: "Automation" },
+              { icon: Code2, label: "React / Next.js" },
+              { icon: Zap, label: "AI Integration" },
+              { icon: Code2, label: "TypeScript" },
+              { icon: Zap, label: "Full Stack" },
             ].map((tech, i) => (
               <div
                 key={tech.label}
@@ -84,10 +84,10 @@ const Hero = () => {
           {/* Trust Indicators - Bento style */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-up animation-delay-500">
             {[
-              { value: "50+", label: "Projects" },
-              { value: "100%", label: "Satisfaction" },
-              { value: "24h", label: "Response" },
-              { value: "3x", label: "ROI Average" },
+              { value: "50+", label: "Projects Delivered" },
+              { value: "100%", label: "Client Satisfaction" },
+              { value: "24h", label: "Response Time" },
+              { value: "3x", label: "Average ROI" },
             ].map((stat) => (
               <div
                 key={stat.label}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Star, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -78,16 +79,23 @@ const Testimonials = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Client Reviews & Testimonials - Freelance Web Developer"
+        description="Read what clients say about working with NovaLabs freelance web development. Real reviews from startups and small businesses. Share your experience with our web development services."
+        keywords="freelance web developer reviews, NovaLabs testimonials, web development client reviews, freelance developer feedback, website developer reviews"
+        canonical="https://freelance.avikbhanja.tech/testimonials"
+      />
+
       {/* Hero */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(280_100%_70%/0.05),transparent_50%)]" />
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6 animate-fade-up">
-              Client <span className="text-gradient">Testimonials</span>
+              Client <span className="text-gradient">Reviews</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed animate-fade-up animation-delay-100">
-              Real stories from real businesses we've helped grow. Share your
+              Real stories from real businesses we've helped grow with professional freelance web development. Share your
               experience working with us!
             </p>
           </div>

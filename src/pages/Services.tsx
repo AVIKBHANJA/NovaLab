@@ -1,80 +1,138 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Globe, Bot, Workflow, Share2, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Freelance Web Development Services",
+  description: "Professional freelance web development, AI tools, chatbot development, and digital marketing services",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "Custom Website Design & Development",
+        description: "Professional freelance website design and development services. We build responsive, SEO-optimized, high-performance websites for startups and small businesses.",
+        provider: { "@type": "Organization", name: "NovaLabs" },
+        areaServed: "Worldwide",
+        serviceType: "Web Development",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "AI Tools & Generator Development",
+        description: "Custom AI-powered tool development including content generators, data analysis tools, and intelligent automation systems.",
+        provider: { "@type": "Organization", name: "NovaLabs" },
+        areaServed: "Worldwide",
+        serviceType: "AI Development",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "Chatbot & Website Automation",
+        description: "Custom chatbot development and business process automation to reduce manual work and provide 24/7 customer engagement.",
+        provider: { "@type": "Organization", name: "NovaLabs" },
+        areaServed: "Worldwide",
+        serviceType: "Automation",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Service",
+        name: "Social Media & Digital Presence",
+        description: "Complete social media strategy, content planning, and digital branding services to grow your online visibility.",
+        provider: { "@type": "Organization", name: "NovaLabs" },
+        areaServed: "Worldwide",
+        serviceType: "Digital Marketing",
+      },
+    },
+  ],
+};
+
 const services = [
   {
     icon: Globe,
-    title: "Website Design & Development",
-    description: "We create stunning, high-performance websites that not only look great but drive real business results.",
-    whoFor: "Startups, small businesses, and creators who need a professional online presence",
+    title: "Custom Website Design & Development",
+    description: "We design and develop stunning, high-performance websites that not only look great but drive real business results. As experienced freelance web developers, we build custom solutions tailored to your brand and business goals.",
+    whoFor: "Startups, small businesses, and creators who need a professional online presence that converts visitors into customers",
     includes: [
-      "Custom design tailored to your brand",
-      "Responsive development for all devices",
-      "SEO-optimized structure",
-      "Fast loading speeds",
-      "Content management system",
-      "Analytics integration",
+      "Custom responsive design tailored to your brand",
+      "Mobile-first development for all devices",
+      "SEO-optimized structure and content",
+      "Lightning-fast page load speeds",
+      "Content management system (CMS) integration",
+      "Google Analytics & conversion tracking",
     ],
     benefits: [
-      "Establish credibility instantly",
-      "Convert more visitors to customers",
-      "Stand out from competitors",
+      "Establish instant credibility with potential clients",
+      "Convert more website visitors into paying customers",
+      "Stand out from competitors with a unique design",
     ],
   },
   {
     icon: Bot,
-    title: "AI Tools & Generators",
-    description: "Leverage the power of AI with custom tools that automate repetitive tasks and enhance your productivity.",
-    whoFor: "Businesses looking to streamline operations and offer innovative solutions to their customers",
+    title: "AI Tools & Generator Development",
+    description: "Leverage the power of artificial intelligence with custom AI tools that automate repetitive tasks and supercharge your productivity. From content generators to data analysis tools, we build AI solutions that deliver measurable ROI.",
+    whoFor: "Businesses looking to streamline operations, reduce costs, and offer innovative AI-powered solutions to their customers",
     includes: [
-      "Custom AI tool development",
-      "Integration with existing systems",
-      "User-friendly interfaces",
-      "Training & documentation",
-      "Ongoing maintenance",
+      "Custom AI tool design & development",
+      "Seamless integration with existing systems",
+      "Intuitive user-friendly interfaces",
+      "Comprehensive training & documentation",
+      "Ongoing maintenance & model updates",
     ],
     benefits: [
-      "Save hours of manual work",
-      "Reduce operational costs",
-      "Offer cutting-edge features",
+      "Save hours of manual work every week",
+      "Reduce operational costs by up to 70%",
+      "Offer cutting-edge AI features to your users",
     ],
   },
   {
     icon: Workflow,
-    title: "Website Automation & Chatbots",
-    description: "Smart automation systems and chatbots that work around the clock to engage your customers and streamline operations.",
-    whoFor: "Businesses that want to scale customer support and automate repetitive tasks",
+    title: "Chatbot & Website Automation",
+    description: "Smart chatbot development and automation systems that work around the clock to engage your customers, answer queries, and streamline your business operations. Never miss a lead again with 24/7 automated customer engagement.",
+    whoFor: "Businesses that want to scale customer support, capture more leads, and automate repetitive tasks without hiring more staff",
     includes: [
-      "Custom chatbot development",
-      "Multi-platform integration",
-      "Natural language processing",
-      "Analytics & insights",
-      "Continuous optimization",
+      "Custom AI chatbot development",
+      "Multi-platform integration (website, WhatsApp, Slack)",
+      "Natural language processing for human-like conversations",
+      "Analytics dashboard & conversation insights",
+      "Continuous optimization & training",
     ],
     benefits: [
-      "24/7 customer engagement",
-      "Faster response times",
-      "Reduced support costs",
+      "24/7 customer engagement without extra staff",
+      "90% faster response times for customer queries",
+      "Reduced support costs by up to 60%",
     ],
   },
   {
     icon: Share2,
-    title: "Social Media & Digital Support",
-    description: "Comprehensive digital presence support to grow your brand visibility and engagement across all platforms.",
-    whoFor: "Brands and creators who want to grow their online audience and engagement",
+    title: "Social Media & Digital Presence",
+    description: "Comprehensive digital marketing and social media management to grow your brand visibility and engagement across all platforms. We help you build a consistent, professional online presence that attracts your target audience.",
+    whoFor: "Brands and creators who want to grow their online following, increase engagement, and convert social media into revenue",
     includes: [
-      "Social media strategy",
-      "Content calendar planning",
-      "Profile optimization",
-      "Engagement tactics",
-      "Performance reporting",
+      "Social media strategy & content planning",
+      "Content calendar creation & scheduling",
+      "Profile optimization across platforms",
+      "Engagement tactics & community building",
+      "Monthly performance reporting & insights",
     ],
     benefits: [
-      "Increased brand awareness",
-      "Higher engagement rates",
-      "Consistent brand presence",
+      "Increased brand awareness and reach",
+      "Higher engagement rates and follower growth",
+      "Consistent professional brand presence",
     ],
   },
 ];
@@ -82,16 +140,24 @@ const services = [
 const Services = () => {
   return (
     <Layout>
+      <SEO
+        title="Freelance Web Development Services - Website Design, AI Tools & Chatbots"
+        description="Professional freelance web development services including custom website design, AI tool development, chatbot integration & digital marketing. Affordable pricing for startups & small businesses. Get a free quote today."
+        keywords="freelance web development services, custom website design, AI chatbot development, website automation, hire freelance developer, web developer for hire, affordable web development, React developer services, Next.js development"
+        canonical="https://freelance.avikbhanja.tech/services"
+        jsonLd={servicesSchema}
+      />
+
       {/* Hero */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(186_100%_50%/0.1),transparent_50%)]" />
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6 animate-fade-up">
-              Our <span className="text-gradient">Services</span>
+              Freelance Web Development <span className="text-gradient">Services</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed animate-fade-up animation-delay-100">
-              End-to-end digital solutions designed to help your business grow. From stunning websites to AI-powered tools, we've got you covered.
+              End-to-end digital solutions from an experienced freelance web developer. From custom website design to AI-powered tools, we deliver professional results at competitive prices.
             </p>
           </div>
         </div>
@@ -125,7 +191,7 @@ const Services = () => {
                   </div>
                   <Link to="/contact">
                     <Button variant="hero" size="lg">
-                      Get Started
+                      Get a Free Quote
                       <ArrowRight className="w-4 h-4" />
                     </Button>
                   </Link>
@@ -169,7 +235,7 @@ const Services = () => {
               Not Sure What You Need?
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Book a free consultation and we'll help you figure out the best solution for your business.
+              Book a free 30-minute consultation with our freelance web development team. We'll help you figure out the best solution for your business goals and budget.
             </p>
             <Link to="/contact">
               <Button variant="hero" size="xl">

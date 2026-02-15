@@ -19,12 +19,12 @@ const FinalCTA = () => {
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-up animation-delay-100">
-            Ready to Build Something
+            Ready to Hire a Freelance
             <br />
-            <span className="text-gradient">Amazing Together?</span>
+            <span className="text-gradient">Web Developer?</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto animate-fade-up animation-delay-200">
-            Let's discuss your project and explore how we can help you achieve your digital goals. No pressure, just a friendly conversation.
+            Book a free 30-minute consultation. Let's discuss your project, explore solutions, and get you a custom quote. No pressure, no obligation.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up animation-delay-300">
             <Link to="/contact">

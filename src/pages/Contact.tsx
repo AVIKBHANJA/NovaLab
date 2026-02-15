@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Mail, MapPin, Clock, Send, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -97,17 +98,24 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact Us - Hire a Freelance Web Developer | Free Consultation"
+        description="Ready to hire a freelance web developer? Contact NovaLabs for a free 30-minute consultation. Get a custom quote for your website, AI tool, or automation project. Fast response within 24 hours."
+        keywords="hire freelance web developer, contact freelance developer, free web development consultation, get website quote, freelance developer contact, web development inquiry"
+        canonical="https://freelance.avikbhanja.tech/contact"
+      />
+
       {/* Hero */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(186_100%_50%/0.1),transparent_50%)]" />
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6 animate-fade-up">
-              Let's <span className="text-gradient">Talk</span>
+              Hire a Freelance <span className="text-gradient">Web Developer</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed animate-fade-up animation-delay-100">
-              Have a project in mind? We'd love to hear about it. Fill out the
-              form below or book a free consultation call.
+              Have a project in mind? Get a free consultation and custom quote. Fill out the
+              form below or book a free 30-minute call with our team.
             </p>
           </div>
         </div>
