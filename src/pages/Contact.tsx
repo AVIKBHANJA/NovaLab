@@ -103,6 +103,23 @@ const Contact = () => {
         description="Ready to hire a freelance web developer? Contact NovaLabs for a free 30-minute consultation. Get a custom quote for your website, AI tool, or automation project. Fast response within 24 hours."
         keywords="hire freelance web developer, contact freelance developer, free web development consultation, get website quote, freelance developer contact, web development inquiry"
         canonical="https://freelance.avikbhanja.tech/contact"
+        jsonLd={[
+          {
+            "@type": "ContactPage",
+            "@id": "https://freelance.avikbhanja.tech/contact#webpage",
+            url: "https://freelance.avikbhanja.tech/contact",
+            name: "Contact NovaLabs - Hire a Freelance Web Developer",
+            isPartOf: { "@id": "https://freelance.avikbhanja.tech/#website" },
+            description: "Contact NovaLabs for a free 30-minute consultation. Get a custom quote for your website, AI tool, or automation project.",
+          },
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://freelance.avikbhanja.tech" },
+              { "@type": "ListItem", position: 2, name: "Contact", item: "https://freelance.avikbhanja.tech/contact" },
+            ],
+          },
+        ]}
       />
 
       {/* Hero */}

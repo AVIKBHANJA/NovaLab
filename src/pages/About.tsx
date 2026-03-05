@@ -4,13 +4,29 @@ import { Link } from "react-router-dom";
 import { Zap, Target, Users, Lightbulb, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const aboutSchema = {
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  mainEntity: {
+const aboutSchema = [
+  {
+    "@type": "AboutPage",
+    "@id": "https://freelance.avikbhanja.tech/about#webpage",
+    url: "https://freelance.avikbhanja.tech/about",
+    name: "About NovaLabs - Freelance Web Developer Avik Bhanja",
+    isPartOf: { "@id": "https://freelance.avikbhanja.tech/#website" },
+    mainEntity: { "@id": "https://freelance.avikbhanja.tech/#founder" },
+    description: "Meet Avik Bhanja, freelance full-stack web developer and founder of NovaLabs.",
+  },
+  {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://freelance.avikbhanja.tech" },
+      { "@type": "ListItem", position: 2, name: "About", item: "https://freelance.avikbhanja.tech/about" },
+    ],
+  },
+  {
     "@type": "Person",
+    "@id": "https://freelance.avikbhanja.tech/#founder",
     name: "Avik Bhanja",
     jobTitle: "Freelance Full-Stack Web Developer",
+    image: "https://freelance.avikbhanja.tech/og-image.png",
     description: "Experienced freelance web developer and founder of NovaLabs, specializing in React, Next.js, TypeScript, and AI-powered web applications for startups and small businesses.",
     url: "https://freelance.avikbhanja.tech/about",
     sameAs: [
@@ -19,13 +35,9 @@ const aboutSchema = {
       "https://github.com/AVIKBHANJA",
     ],
     knowsAbout: ["React", "Next.js", "TypeScript", "Node.js", "AI Integration", "Web Design", "Tailwind CSS"],
-    worksFor: {
-      "@type": "Organization",
-      name: "NovaLabs",
-      url: "https://freelance.avikbhanja.tech",
-    },
+    worksFor: { "@id": "https://freelance.avikbhanja.tech/#organization" },
   },
-};
+];
 
 const team = [
   {

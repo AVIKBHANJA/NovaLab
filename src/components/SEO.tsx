@@ -59,7 +59,11 @@ const SEO = ({
       {/* JSON-LD Structured Data */}
       {jsonLd && (
         <script type="application/ld+json">
-          {JSON.stringify(Array.isArray(jsonLd) ? jsonLd : jsonLd)}
+          {JSON.stringify(
+            Array.isArray(jsonLd)
+              ? { "@context": "https://schema.org", "@graph": jsonLd }
+              : jsonLd
+          )}
         </script>
       )}
     </Helmet>

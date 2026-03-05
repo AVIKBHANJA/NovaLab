@@ -22,21 +22,24 @@ const Footer = () => {
             <div className="flex gap-4">
               <a
                 href="https://x.com/avik_bhanja"
-                className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
+                className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
+                aria-label="Twitter"
               >
-                <Twitter className="w-4 h-4" />
+                <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/in/avikbhanja/"
-                className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
+                className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
+                aria-label="LinkedIn"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="https://www.instagram.com/avik_b_001/"
-                className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
+                className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
+                aria-label="Instagram"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -101,12 +104,12 @@ const Footer = () => {
             © {new Date().getFullYear()} NovaLabs. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+            <Link to="/privacy-policy" className="text-muted-foreground text-sm hover:text-primary transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+            </Link>
+            <Link to="/terms-of-service" className="text-muted-foreground text-sm hover:text-primary transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

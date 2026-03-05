@@ -24,6 +24,10 @@ export default defineConfig(({ mode }) => ({
     sourcemap: false,
     // Optimize chunk size
     chunkSizeWarningLimit: 500,
+    modulePreload: {
+      resolveDependencies: (_filename, deps) =>
+        deps.filter((dep) => !dep.includes("three-vendor")),
+    },
     rollupOptions: {
       output: {
         // Manual chunks for better caching

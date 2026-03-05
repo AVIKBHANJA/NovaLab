@@ -77,6 +77,23 @@ const Work = () => {
         description="See real results from our freelance web development projects. 50+ websites, AI tools, and automation systems built for startups and small businesses. View our portfolio and case studies."
         keywords="freelance web developer portfolio, web development case studies, website design examples, freelance developer projects, React portfolio, AI tool examples"
         canonical="https://freelance.avikbhanja.tech/work"
+        jsonLd={[
+          {
+            "@type": "CollectionPage",
+            "@id": "https://freelance.avikbhanja.tech/work#webpage",
+            url: "https://freelance.avikbhanja.tech/work",
+            name: "Portfolio & Case Studies - Freelance Web Development Projects",
+            isPartOf: { "@id": "https://freelance.avikbhanja.tech/#website" },
+            description: "See real results from our freelance web development projects. 50+ websites, AI tools, and automation systems built for startups and small businesses.",
+          },
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://freelance.avikbhanja.tech" },
+              { "@type": "ListItem", position: 2, name: "Work", item: "https://freelance.avikbhanja.tech/work" },
+            ],
+          },
+        ]}
       />
 
       {/* Hero */}

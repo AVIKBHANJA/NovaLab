@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="NovaLabs | Freelance Web Developer - Websites, AI Tools & Automation" />
@@ -59,53 +60,56 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "NovaLabs",
-      "alternateName": "NovaLabs Digital Solutions",
-      "url": "https://freelance.avikbhanja.tech",
-      "logo": "https://freelance.avikbhanja.tech/favicon.png",
-      "image": "https://freelance.avikbhanja.tech/og-image.png",
-      "description": "Professional freelance web developer offering custom website design, development, AI tools, and automation solutions for startups and small businesses worldwide.",
-      "founder": {
-        "@type": "Person",
-        "name": "Avik Bhanja",
-        "url": "https://www.linkedin.com/in/avikbhanja/",
-        "jobTitle": "Freelance Full-Stack Web Developer"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "avikbhanja3@gmail.com",
-        "contactType": "customer service",
-        "availableLanguage": ["English", "Hindi"]
-      },
-      "sameAs": [
-        "https://x.com/avik_bhanja",
-        "https://www.linkedin.com/in/avikbhanja/",
-        "https://www.instagram.com/avik_b_001/",
-        "https://github.com/AVIKBHANJA"
-      ],
-      "priceRange": "$$",
-      "areaServed": "Worldwide",
-      "serviceType": ["Web Development", "Website Design", "AI Tool Development", "Chatbot Development", "Business Automation"]
-    }
-    </script>
-
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "NovaLabs",
-      "url": "https://freelance.avikbhanja.tech",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://freelance.avikbhanja.tech/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://freelance.avikbhanja.tech/#website",
+          "name": "NovaLabs",
+          "url": "https://freelance.avikbhanja.tech"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://freelance.avikbhanja.tech/#organization",
+          "name": "NovaLabs",
+          "alternateName": "NovaLabs Digital Solutions",
+          "url": "https://freelance.avikbhanja.tech",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://freelance.avikbhanja.tech/favicon.png"
+          },
+          "image": "https://freelance.avikbhanja.tech/og-image.png",
+          "description": "Professional freelance web developer offering custom website design, development, AI tools, and automation solutions for startups and small businesses worldwide.",
+          "founder": { "@id": "https://freelance.avikbhanja.tech/#founder" },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "avikbhanja3@gmail.com",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Hindi"]
+          },
+          "sameAs": [
+            "https://x.com/avik_bhanja",
+            "https://www.linkedin.com/in/avikbhanja/",
+            "https://www.instagram.com/avik_b_001/",
+            "https://github.com/AVIKBHANJA"
+          ],
+          "areaServed": {
+            "@type": "Place",
+            "name": "Worldwide"
+          },
+          "serviceType": ["Web Development", "Website Design", "AI Tool Development", "Chatbot Development", "Business Automation"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://freelance.avikbhanja.tech/#founder",
+          "name": "Avik Bhanja",
+          "url": "https://www.linkedin.com/in/avikbhanja/",
+          "jobTitle": "Freelance Full-Stack Web Developer"
+        }
+      ]
     }
     </script>
   </head>

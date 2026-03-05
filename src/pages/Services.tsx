@@ -4,62 +4,81 @@ import { Link } from "react-router-dom";
 import { Globe, Bot, Workflow, Share2, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const servicesSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "Freelance Web Development Services",
-  description: "Professional freelance web development, AI tools, chatbot development, and digital marketing services",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      item: {
-        "@type": "Service",
-        name: "Custom Website Design & Development",
-        description: "Professional freelance website design and development services. We build responsive, SEO-optimized, high-performance websites for startups and small businesses.",
-        provider: { "@type": "Organization", name: "NovaLabs" },
-        areaServed: "Worldwide",
-        serviceType: "Web Development",
+const servicesSchema = [
+  {
+    "@type": "WebPage",
+    "@id": "https://freelance.avikbhanja.tech/services#webpage",
+    url: "https://freelance.avikbhanja.tech/services",
+    name: "Freelance Web Development Services",
+    isPartOf: { "@id": "https://freelance.avikbhanja.tech/#website" },
+    description: "Professional freelance web development, AI tools, chatbot development, and digital marketing services.",
+  },
+  {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://freelance.avikbhanja.tech" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://freelance.avikbhanja.tech/services" },
+    ],
+  },
+  {
+    "@type": "ItemList",
+    name: "Freelance Web Development Services",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Service",
+          name: "Custom Website Design & Development",
+          url: "https://freelance.avikbhanja.tech/services",
+          description: "Professional freelance website design and development services. We build responsive, SEO-optimized, high-performance websites for startups and small businesses.",
+          provider: { "@id": "https://freelance.avikbhanja.tech/#organization" },
+          areaServed: "Worldwide",
+          serviceType: "Web Development",
+        },
       },
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      item: {
-        "@type": "Service",
-        name: "AI Tools & Generator Development",
-        description: "Custom AI-powered tool development including content generators, data analysis tools, and intelligent automation systems.",
-        provider: { "@type": "Organization", name: "NovaLabs" },
-        areaServed: "Worldwide",
-        serviceType: "AI Development",
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Service",
+          name: "AI Tools & Generator Development",
+          url: "https://freelance.avikbhanja.tech/services",
+          description: "Custom AI-powered tool development including content generators, data analysis tools, and intelligent automation systems.",
+          provider: { "@id": "https://freelance.avikbhanja.tech/#organization" },
+          areaServed: "Worldwide",
+          serviceType: "AI Development",
+        },
       },
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      item: {
-        "@type": "Service",
-        name: "Chatbot & Website Automation",
-        description: "Custom chatbot development and business process automation to reduce manual work and provide 24/7 customer engagement.",
-        provider: { "@type": "Organization", name: "NovaLabs" },
-        areaServed: "Worldwide",
-        serviceType: "Automation",
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Service",
+          name: "Chatbot & Website Automation",
+          url: "https://freelance.avikbhanja.tech/services",
+          description: "Custom chatbot development and business process automation to reduce manual work and provide 24/7 customer engagement.",
+          provider: { "@id": "https://freelance.avikbhanja.tech/#organization" },
+          areaServed: "Worldwide",
+          serviceType: "Automation",
+        },
       },
-    },
-    {
-      "@type": "ListItem",
-      position: 4,
-      item: {
-        "@type": "Service",
-        name: "Social Media & Digital Presence",
-        description: "Complete social media strategy, content planning, and digital branding services to grow your online visibility.",
-        provider: { "@type": "Organization", name: "NovaLabs" },
-        areaServed: "Worldwide",
-        serviceType: "Digital Marketing",
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "Service",
+          name: "Social Media & Digital Presence",
+          url: "https://freelance.avikbhanja.tech/services",
+          description: "Complete social media strategy, content planning, and digital branding services to grow your online visibility.",
+          provider: { "@id": "https://freelance.avikbhanja.tech/#organization" },
+          areaServed: "Worldwide",
+          serviceType: "Digital Marketing",
+        },
       },
-    },
-  ],
-};
+    ],
+  },
+];
 
 const services = [
   {

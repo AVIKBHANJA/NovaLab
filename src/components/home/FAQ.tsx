@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "How much does it cost to hire a freelance web developer?",
     answer:
-      "Our freelance web development projects typically range from $100 to $500+ depending on complexity. We offer competitive pricing as a student-led studio without sacrificing quality. Simple landing pages start around $500, while full-stack web applications with AI features can range from $2,000 to $5,000+. Every project starts with a free consultation where we provide a transparent, no-obligation quote.",
+      "Our freelance web development projects typically range from $500 to $5,000+ depending on complexity. We offer competitive pricing as a student-led studio without sacrificing quality. Simple landing pages start around $500, while full-stack web applications with AI features can range from $2,000 to $5,000+. Every project starts with a free consultation where we provide a transparent, no-obligation quote.",
   },
   {
     question: "How long does it take to build a custom website?",

@@ -84,6 +84,23 @@ const Testimonials = () => {
         description="Read what clients say about working with NovaLabs freelance web development. Real reviews from startups and small businesses. Share your experience with our web development services."
         keywords="freelance web developer reviews, NovaLabs testimonials, web development client reviews, freelance developer feedback, website developer reviews"
         canonical="https://freelance.avikbhanja.tech/testimonials"
+        jsonLd={[
+          {
+            "@type": "WebPage",
+            "@id": "https://freelance.avikbhanja.tech/testimonials#webpage",
+            url: "https://freelance.avikbhanja.tech/testimonials",
+            name: "Client Reviews & Testimonials - Freelance Web Developer",
+            isPartOf: { "@id": "https://freelance.avikbhanja.tech/#website" },
+            description: "Read what clients say about working with NovaLabs freelance web development.",
+          },
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://freelance.avikbhanja.tech" },
+              { "@type": "ListItem", position: 2, name: "Testimonials", item: "https://freelance.avikbhanja.tech/testimonials" },
+            ],
+          },
+        ]}
       />
 
       {/* Hero */}
